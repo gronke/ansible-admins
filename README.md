@@ -7,5 +7,5 @@ Example
 Configure administrator access for @gronke
 ```yaml
 - role: gronke.admins
-  GIT_USER=gronke  
+  GITHUB_USER: gronke  
 ``` 

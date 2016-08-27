@@ -1,12 +1,12 @@
 ---
 
-- debug: msg="Admin Account {{GIT_USER}}"
+- debug: msg="Admin Account {{GITHUB_USER}}"
 
 - name: sudo group does not need a password
   lineinfile: dest=/etc/sudoers line="%sudo ALL=(ALL) NOPASSWD:ALL" regexp="^\%sudo"
 
 - name: user account is created
-  user: name="{{GIT_USER}}" state=present group=sudo groups=sudo,adm
+  user: name="{{GITHUB_USER}}" state=present group=sudo groups=sudo,adm
 
 - name: authorized_keys are up to date
-  authorized_key: user="{{GIT_USER}}" key="https://github.com/{{GIT_USER}}.keys"
+  authorized_key: user="{{GITHUB_USER}}" key="https://github.com/{{GITHUB_USER}}.keys"
