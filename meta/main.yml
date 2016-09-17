@@ -1,0 +1,23 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: Stefan Grönke
+  description: Grant admin access to GitHub users
+  company: gronke.org
+  license: MIT
+  min_ansible_version: 1.9
+  platforms:
+    - name: Debian
+      versions:
+        - jessie
+        - wheezy
+    - name: Ubuntu
+      versions:
+        - trusty
+  galaxy_tags:
+    - github
+    - user
+    - admin
+    - ssh
+
