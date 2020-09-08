@@ -2,6 +2,12 @@
 
 - debug: msg="Admin Account {{GITHUB_USER}}"
 
+- name: sudo is installed
+  apt:
+    name: sudo
+    state: latest
+  when: (ansible_os_family == 'Debian') or (ansible_os_family == 'Ubuntu')
+
 - name: sudo group does not need a password
   lineinfile: dest=/etc/sudoers line="%sudo ALL=(ALL) NOPASSWD:ALL" regexp="^\%sudo"
 
